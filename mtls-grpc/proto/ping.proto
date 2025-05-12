@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package ping;
+
+// 理解下 go_package 格式是：[go module 路径 + 目录路径];[生成代码的包名]
+option go_package = "mtls-grpc/proto/ping;ping";
+
+service PingService {
+  rpc Ping (PingRequest) returns (PingResponse);
+}
+
+message PingRequest {
+  string message = 1;
+}
+
+message PingResponse {
+  string reply = 1;
+}

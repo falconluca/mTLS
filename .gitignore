@@ -1,0 +1,7 @@
+.idea
+
+bin/
+
+certs/*.pem
+certs/*.csr
+certs/*.key
